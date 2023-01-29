@@ -28,7 +28,7 @@ $ ipython
 
     exit()
 
-# source bionic ----
+# source bionic OPTIONAL ----
 sed -i 's/.*//' sources.list
 
 echo "deb https://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
@@ -66,12 +66,7 @@ c.NotebookApp.open_browser = False
 
 c.NotebookApp.port = 80
 
-#
-# jupyter notebook --allow-root
-#
-# http://localhost:7777/tree?
-
-#exec
+# exec ----
 docker exec -it c4311f036c31 /bin/bash
 
 # open in browser
