@@ -2,7 +2,7 @@
 docker pull pytorch/pytorch:1.12.1-cuda11.3-cudnn8-runtime
 docker pull quay.io/qiime2/core:2022.11
 
-#run image with certain setup
+# run image with certain setup ----
 
 docker run -it -m 60G --gpus=all --name NAAM \
 -v D:/docker_share_D:/data/docker_qiime2_share_container_D \
@@ -10,7 +10,7 @@ docker run -it -m 60G --gpus=all --name NAAM \
 -v F:/docker_share_F:/data/docker_qiime2_share_container_F \
 -p 80:80 pytorch/pytorch:1.12.1-cuda11.3-cudnn8-runtime /bin/bash
 
-# setup ----
+# setup OPTIONAL----
 
 pip install jupyter -i https://pypi.tuna.tsinghua.edu.cn/simple
 pip install jupyter_contrib_nbextensions -i https://pypi.tuna.tsinghua.edu.cn/simple
