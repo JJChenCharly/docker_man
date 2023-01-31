@@ -11,6 +11,8 @@ docker run -it -m 60G --gpus=all --name NAAM \
 -p 80:80 pytorch/pytorch:1.12.1-cuda11.3-cudnn8-runtime /bin/bash
 
 # source bionic OPTIONAL ----
+# https://developer.aliyun.com/mirror/
+
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 
 sed -i 's/.*//' /etc/apt/sources.list
