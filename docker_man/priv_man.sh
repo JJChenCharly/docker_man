@@ -29,7 +29,11 @@ $ ipython
     exit()
 
 # source bionic OPTIONAL ----
-sed -i 's/.*//' sources.list
+cp /etc/apt/sources.list /etc/apt/sources.list.bak
+
+sed -i 's/.*//' /etc/apt/sources.list
+
+apt-get install apt-transport-https
 
 echo "deb https://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
 deb-src https://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
