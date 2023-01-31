@@ -10,24 +10,6 @@ docker run -it -m 60G --gpus=all --name NAAM \
 -v F:/docker_share_F:/data/docker_qiime2_share_container_F \
 -p 80:80 pytorch/pytorch:1.12.1-cuda11.3-cudnn8-runtime /bin/bash
 
-# setup OPTIONAL----
-
-pip install jupyter -i https://pypi.tuna.tsinghua.edu.cn/simple
-pip install jupyter_contrib_nbextensions -i https://pypi.tuna.tsinghua.edu.cn/simple
-jupyter contrib nbextension install --user
-
-pip install ipython -i https://pypi.tuna.tsinghua.edu.cn/simple
-
-$ ipython
-
-    from notebook.auth import passwd
-
-    passwd()
-
-    'argon2:$argon2id$v=19$m=10240,t=10,p=8$2ENvg6zjYaYxuOnHqxeShg$lBmZl8JTjMkegE2wPjA8aOv+m3PvJdhL634Fxwyp2QE'
-
-    exit()
-
 # source bionic OPTIONAL ----
 cp /etc/apt/sources.list /etc/apt/sources.list.bak
 
@@ -55,6 +37,27 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
 apt update
 apt install vim
 apt-get install screen
+
+# setup OPTIONAL----
+
+apt install python3
+apt-get install python3-pip
+
+pip install jupyter -i https://pypi.tuna.tsinghua.edu.cn/simple
+pip install jupyter_contrib_nbextensions -i https://pypi.tuna.tsinghua.edu.cn/simple
+jupyter contrib nbextension install --user
+
+pip install ipython -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+$ ipython
+
+    from notebook.auth import passwd
+
+    passwd()
+
+    'argon2:$argon2id$v=19$m=10240,t=10,p=8$2ENvg6zjYaYxuOnHqxeShg$lBmZl8JTjMkegE2wPjA8aOv+m3PvJdhL634Fxwyp2QE'
+
+    exit()
 
 # jupy set ----
 jupyter notebook --generate-config --allow-root
