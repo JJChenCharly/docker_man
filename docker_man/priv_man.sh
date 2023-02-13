@@ -6,7 +6,7 @@ docker pull quay.io/qiime2/core:2022.11
 
 docker run -it -m 60G --gpus=all --name NAAM \
 -v D:/docker_share_D:/data/docker_qiime2_share_container_D \
--v E:/docker_qiime2_E/data/docker_qiime2_share_container_E \
+-v E:/docker_qiime2_E：/data/docker_qiime2_share_container_E \
 -v F:/docker_share_F:/data/docker_qiime2_share_container_F \
 -p 80:80 pytorch/pytorch:1.12.1-cuda11.3-cudnn8-runtime /bin/bash
 
