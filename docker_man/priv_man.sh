@@ -37,6 +37,8 @@ deb-src https://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted univ
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
 
 apt update
+apt upgrade
+
 apt install vim
 apt-get install screen
 
