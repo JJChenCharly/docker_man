@@ -16,6 +16,9 @@ docker run -it -m 60G --gpus=all --name NAAM \
 # back up source list
 cp /etc/apt/sources.list /etc/apt/sources.list.bak 
 
+apt update
+apt upgrade
+
 # clean current source list
 sed -i 's/.*//' /etc/apt/sources.list
 # or
