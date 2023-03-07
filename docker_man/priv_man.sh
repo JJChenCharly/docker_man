@@ -19,17 +19,16 @@ cp /etc/apt/sources.list /etc/apt/sources.list.bak
 apt update
 apt upgrade
 
+# some containers MAY need this
+apt-get install apt-transport-https
+
+# some source MAY need new key
+apt-get install gnupg
+
 # clean current source list
 sed -i 's/.*//' /etc/apt/sources.list
 # or
 echo "" > /etc/apt/sources.list
-
-# some containers may need this
-apt-get install apt-transport-https
-
-# some source may need new key
-apt-get install gnupg
-apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
 
 # write in new sources
 echo "deb https://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse
@@ -46,6 +45,9 @@ deb-src https://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted univer
 
 deb https://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse
 deb-src https://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse" | tee -a /etc/apt/sources.list
+
+# some source MAY need new key
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 3B4FE6ACC0B21F32
 
 # some normal set up
 apt update
