@@ -27,6 +27,21 @@ deb-src https://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted univ
 deb https://mirrors.aliyun.com/ubuntu/ xenial main
 deb-src https://mirrors.aliyun.com/ubuntu/ xenial main
 
+# tsinghua 22.04 jammy ----
+echo "deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
+
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
+
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
+
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
+deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
+" | tee -a /etc/apt/sources.list
+
+
 deb https://mirrors.aliyun.com/ubuntu/ xenial-updates main
 deb-src https://mirrors.aliyun.com/ubuntu/ xenial-updates main
 
